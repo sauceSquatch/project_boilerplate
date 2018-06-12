@@ -1,0 +1,337 @@
+// @import "reset";
+// @import "vars";
+
+$BG_gray          : #efefef;
+$font_gray        : #515151;
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+
+body {
+  #video-link-module-3 {
+    display: none;
+  }
+  margin: 0;
+  .container-fluid { padding-left: 0px; padding-right: 0px; }
+  .tins-wrapper {
+    //bootstrap over-rides
+    .col-sm-6 { padding: 0px; }
+    .row { margin-left: 0px; margin-right: 0px; }
+    .hero-section {
+      background: no-repeat right center url('../images/2018-mh-tins-landing-hero_mobile.jpg');
+      background-size: cover;
+      height: 450px;
+      text-align: center;
+      @media screen and (min-width: 768px) {
+        background: no-repeat right center url('../images/2018-mh-tins-landing-hero.jpg');
+        background-size: cover;
+        height: 100%;
+      }
+      #top-hero-content {
+        color: #FFF;
+        padding: 60px 0;
+        h2 {
+          font-size: 30px;
+          padding: 0 30px;
+        }
+        h3 {
+          font-size: 20px;
+          font-style: italic;
+          padding: 0 20px;
+          text-transform: none;
+          font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        @media screen and (min-width: 768px) {
+          padding: 100px 0;
+          max-width: 850px;
+          h2 {
+            font-size: 48px;
+          }
+          h3 {
+            font-style: italic;
+            padding: 0 100px;
+            text-transform: none;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+          }
+        }
+      }
+    }
+    
+    .section {
+      padding: 80px 15px 0px 15px;
+      @media screen and (min-width: 768px) {
+        padding: 80px 15px 0px 15px;
+      }
+    }
+    .collection-head {
+      text-align: center;
+      .md-body-copy {
+        padding: 0 20px;
+        @media screen and (min-width: 768px) {
+          padding: 0 120px 20px;
+        }
+      }
+      hr {
+        width: 160px;
+        height: 4px;
+        margin: 0 auto 30px;
+        background: #81bc00;
+      }
+      .tins-collection {
+        width: 100%;
+        min-height: 430px;
+        background: no-repeat center top;
+        background-size: cover;
+        padding-top: 40px;
+        
+        @media screen and (min-width: 768px) {
+          min-height: 305px;
+        }
+
+        .collection-mobile-img {
+          width: 100%;
+          @media screen and (min-width: 768px) {
+            display: none;
+          }
+        }
+      }
+      #tins-collection-mexico {
+        background: none;
+
+        @media screen and (min-width: 768px) {
+          background: no-repeat top center url("../images/2018_tinsgroup1_mexico_dsktp.jpg");
+          background-size: contain;
+        }
+
+      }
+      #tins-collection-china {
+        background: none;
+
+        @media screen and (min-width: 768px) {
+          background: no-repeat top center url("../images/2018_tinsgroup2_china_dsktp.jpg");
+          background-size: contain;
+        }
+
+      }
+      #tins-collection-australia {
+        background: none;
+
+        @media screen and (min-width: 768px) {
+          background: no-repeat top center url("../images/2018_tinsgroup3_australia_dsktp.jpg");
+          background-size: contain;
+        }
+      }
+    }
+    .full-section {
+        padding-right: 0px;
+        padding-left: 0px;
+        @media screen and (min-width: 768px) {
+          padding-right: 0px;
+          padding-left: 0px;
+        }
+
+        .section-content {
+          margin-left: 0px;
+          margin-right: 0px;
+          max-width: 100%;
+          @media screen and (min-width: 768px) {
+            padding-right: 0px;
+            padding-left: 0px;
+            max-width: 100%;
+          }
+        }
+    }
+    .collection {
+      background-color: $BG_gray;
+
+      .not-available {
+        font-style: italic;
+        color: $BG_gray;
+      }
+      .section-content {
+        text-align: center;
+        padding: 0;
+
+        // .flex-row {
+        //   display: flex;
+        //   flex-direction: row;
+        //   align-items: stretch;
+        //   align-content: flex-start;
+        //   .box {
+            
+        //   }
+        // }
+
+        .collapsed {
+          background: no-repeat right center url(../images/dropdown-caret.png);
+          ::before {
+            content: "reveal full collection details";
+          }
+        }
+        .expanded {
+          background: no-repeat right center url(../images/dropdown-caret-active.png);
+          ::before {
+            content: "collapse";
+          }
+        }
+      }
+      .toggle-content {
+        display: none;
+        color: $font_gray;
+        font-size: 20px;
+        font-style: italic;
+        text-decoration: underline;
+        font-family: Georgia, "Times New Roman", serif;
+        display: inline-block;
+        padding: 15px 15px;
+        padding-right: 20px;
+
+        background: no-repeat right center url(../images/dropdown-caret-active.png);
+        ::before {
+          content: "collapse";
+        }
+
+        @media screen and (min-width: 768px) {
+          padding: 30px 15px;
+        }
+      }
+      
+      .collection-details {
+        background-color: #000;
+
+        .icon-play {
+          line-height: .1;
+        }
+
+        .button.button-icon .icon {
+          font-size: 20px;
+          line-height: 1;
+          vertical-align: sub;
+        }
+
+        .only-desktop {
+          display: none;
+          @media screen and (min-width: 768px) {
+            display: block;
+          }
+        }
+        .only-mobile {
+          display: block;
+          @media screen and (min-width: 768px) {
+            display: none;
+          }
+        }
+
+        .detail-panel {
+          color: #FFF;
+          text-align: left;
+
+          .dark-bg {
+            // min-width: 186px;
+            margin-right: 5px;
+          }
+          .video-launcher {
+            // min-width: 186px;
+            margin-top: 10px;
+          }
+
+          .detail-info {
+            padding: 80px 20px 20px 40px;
+            @media screen and (min-width: 768px) {
+              padding: 40px 20px 20px 40px;
+            }
+            @media screen and (min-width: 1000px) {
+              padding: 90px 20px 20px 90px;
+            }
+            .detail-eyebrow {
+              font-size: 16px;
+              font-style: italic;
+              margin-bottom: 20px;
+              text-transform: capitalize;
+            }
+            .detail-title {
+              font-size: 30px;
+              color: #FFF;
+              margin-bottom: 30px;
+            }
+            .detail-desc {
+              font-size: 16px;
+              padding-bottom: 30px;
+              max-width: 400px;
+            }
+            .button {
+              display: none;
+              @media screen and (min-width: 768px) {
+                display: inline-block;
+              }
+            }
+          }
+          
+          .detail-img-holder {
+            overflow: hidden;
+            .detail-img {
+              width: 100%;
+              height: auto;
+              @media screen and (min-width: 768px){
+                min-width: 607px;
+                min-height: 550px;
+                width: 100%;
+              }
+            }
+            .cta-wrapper {
+              display: block;
+              position: absolute;
+              bottom: 20px;
+              width: 100%;
+              padding: 30px;
+              @media screen and (min-width: 768px) {
+                display: none;
+              }
+              .button {
+                display: block;
+                
+              }
+            }
+            
+            .arrow-side {
+              display: none;
+              @media screen and (min-width: 768px) {
+                display: block;
+                position: absolute;
+                width: 45px;
+                height: 90px;
+                top: 44%;
+              }
+            }
+            .right {
+              right: 0px;
+            }
+            .arrow-top {
+              display: block;
+              position: absolute;
+              width: 130px;
+              height: 65px;
+              left: 50%;
+              margin-left: -65px;
+              @media screen and (min-width: 768px) {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+    .section-content {
+      @media screen and (min-width: 1200px) {
+        max-width: 990px;
+      }
+    }
+  }
+  
+}

@@ -1,0 +1,19 @@
+{
+  "name": "basicProjectBoilderplate",
+  "version": "0.1.0",
+  "description": "boilerplate project for quick setup",
+  "author": "Jamie Naioti",
+  "devDependencies": {
+    "gulp": "latest",
+    "gulp-util": "latest",
+    "gulp-sass": "latest",
+    "gulp-coffee": "latest",
+    "gulp-uglify": "latest",
+    "gulp-concat": "latest",
+    "gulp-connect": "latest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/sauceSquatch/basic_project_boilerplate.git"
+  }
+}
